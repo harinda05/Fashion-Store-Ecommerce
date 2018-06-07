@@ -1,6 +1,5 @@
 <?php
 
-require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/session.php');
 
 ?>
 

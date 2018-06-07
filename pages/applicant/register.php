@@ -17,10 +17,11 @@
 	<!-- body -->
 	<div class="main_body">
 		<div class="form">
+			<form method='Post' action='../../php/register_f.php'>
 			<h1>Registration</h1>
 			<hr style="border: 1.5px solid #00204A; margin-bottom: 30px; width: 50%;">
 
-			<label for="username"><b>Email</b></label>
+			<label for="email"><b>Email</b></label>
     		<input type="text" placeholder="Enter Email" name="email" required>
 
     		<br>
@@ -32,7 +33,8 @@
     		<label for="password"><b>Password</b></label>
     		<input type="password" placeholder="Enter Password" name="password" required>
 			
-			<button type="button">Register</button>
+			<input type='submit' value='Register'>
+			</form>
 		</div>
 	</div>
 

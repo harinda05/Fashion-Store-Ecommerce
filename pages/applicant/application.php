@@ -2,9 +2,11 @@
 
 <?php 
 
-//require($_SERVER['DOCUMENT_ROOT'] . '/news1/php/header.php');
 
-//require($_SERVER['DOCUMENT_ROOT'] . '/news1/php/session.php');
+
+require($_SERVER['DOCUMENT_ROOT'] . '/fashion/header.php');
+
+require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/session.php');
 
 
 ?>

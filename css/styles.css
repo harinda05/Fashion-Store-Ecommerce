@@ -314,7 +314,7 @@ div{
     outline: none;
 }
 
-.form button {
+.form input[type=submit]{
     background-color: #FFA500;
     /*color: white;*/
     display: inline-block;

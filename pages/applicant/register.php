@@ -20,6 +20,10 @@
 			<h1>Registration</h1>
 			<hr style="border: 1.5px solid #00204A; margin-bottom: 30px; width: 50%;">
 
+			<label for="username"><b>Email</b></label>
+    		<input type="text" placeholder="Enter Email" name="email" required>
+
+    		<br>
 			<label for="username"><b>Username</b></label>
     		<input type="text" placeholder="Enter Username" name="username" required>
 

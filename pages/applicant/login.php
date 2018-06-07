@@ -1,3 +1,9 @@
+<?php
+
+require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/session.php');
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,6 +22,7 @@
 
 	<!-- body -->
 	<div class="main_body">
+		<form method='Post' action='../../php/login_f.php'>
 		<div class="form">
 			<h1>Log In</h1>
 			<hr style="border: 1.5px solid #00204A; margin-bottom: 30px; width: 50%;">
@@ -30,7 +37,9 @@
 			
 			<p style="text-align: center;">By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a></p>
 
-			<button type="button">Log In</button>
+			<input type='submit' value='Log In'>
+
+			</form>
 		</div>
 	</div>
 

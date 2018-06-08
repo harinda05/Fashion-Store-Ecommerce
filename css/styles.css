@@ -328,3 +328,57 @@ div{
     font-size: 18px;
 
 }
+
+/*admin login*/
+.admin_login{
+	/*height: 50%;*/
+	width: 25%;
+	/*background-color: #fbf7f7;*/
+	margin-left: 37%;
+	margin-top: 10%;
+	/*margin-bottom: 50px;*/
+	box-shadow: 0px 4px 10px 4px white;
+}
+
+.admin_login_heading{
+	padding: 2px;
+	text-align: center;
+	background-color: #00204A;
+	color: white;
+}
+
+.admin_login_form{
+	background-color: #fbf7f7;
+	padding: 10%;
+
+}
+
+.admin_login input[type=text], input[type=password] {
+    width: 90%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+.admin_login input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.admin_login button {
+    background-color: #FFA500;
+    /*color: white;*/
+    display: inline-block;
+    border-radius: 5px;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    font-size: 18px;
+
+}
+

@@ -28,7 +28,8 @@
                     <td>'. $row["position"] .'  </td>
                     <td>'. $row["department"] .'  </td>
                     <td>'. $row["closing_date"] .'  </td>
-                    <td> Apply  </td>
+
+                    <td>'. '<a href="/fashion/pages/job_description.php?job_id='.$row["job_id"].'">View</a> </td>
                   </tr>
                                     
                             ' ;

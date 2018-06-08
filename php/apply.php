@@ -5,7 +5,7 @@
 require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/dbcon.php');
 
     $u_id =1;
-    $job_id = 2;
+    $job_id = 4;
 
  /* Start Getting Form Values */
     $nic = $_POST['nic'];
@@ -19,7 +19,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/dbcon.php');
 
   	
 
-    
+
     // Work Experience
     $work_count=0;
     $data_work=[];
@@ -79,10 +79,38 @@ require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/dbcon.php');
 
  /* End Getting Form Values */
 
+
+ /* Marks */
+
+    if ($edu == 'Post Graduate'){
+        $mark_edu = 20;
+    }
+
+    if ($edu == 'Graduate'){
+        $mark_edu = 15;
+    }
+
+    if ($edu == 'Advanced Level'){
+        $mark_edu = 10;
+    }
+
+    if ($edu == 'Ordinary Level'){
+        $mark_edu = 5;
+    }
+    
+    $prof_mark = 3*$prof_count;
+    $work_mark = 5*$work_count;
+
+
+    $tot_mark = $mark_edu+$prof_mark+$work_mark;
+    var_dump($tot_mark);
+
+    /* End Mark */
+
     
         // insert in to application table
 
-    $sql="INSERT INTO application (u_id,c_id,name,dob,address,contactno,email,education,work_experience,prof_q,cv,img,status) VALUES ('$u_id','job_id','$name','$bdate',' $address','$contactno','$email','$edu','$work_data', '$prof_data','$cvpath','$img_data','received')";
+    $sql="INSERT INTO application (u_id,job_id,name,dob,address,contactno,email,education,work_experience,prof_q,cv,img,mark) VALUES ('$u_id','$job_id','$name','$bdate',' $address','$contactno','$email','$edu','$work_data', '$prof_data','$cvpath','$img_data',$tot_mark)";
     $result = $connection->query($sql);
     
     var_dump($sql);

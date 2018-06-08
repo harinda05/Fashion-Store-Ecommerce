@@ -2,9 +2,11 @@
 
 <?php 
 
-//require($_SERVER['DOCUMENT_ROOT'] . '/news1/php/header.php');
 
-//require($_SERVER['DOCUMENT_ROOT'] . '/news1/php/session.php');
+
+require($_SERVER['DOCUMENT_ROOT'] . '/fashion/header.php');
+
+require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/session.php');
 
 
 ?>
@@ -96,8 +98,9 @@
 		</div>
 
 
-	
- 
+	<?php
+require($_SERVER['DOCUMENT_ROOT'] . '/fashion/footer.php'); ?>
+
 
 
 </body>
@@ -107,9 +110,13 @@
      var original_prof = document.getElementById('prof');
 
      function duplicate_prof() {
-         var clone_prof = original_prof.cloneNode(true); 
-         clone_prof.value = "";// "deep" clone
+         var clone_prof = original_prof.cloneNode(true);
+         console.log('££££££££££££££££££££££££££££')
          clone_prof.id = "prof" + ++i;
+         console.log(clone_prof.childNodes);
+         clone_prof.childNodes[1].value = '';
+         clone_prof.childNodes[3].value = '';
+         clone_prof.childNodes[5].value = '';
          original_prof.parentNode.appendChild(clone_prof);
      }
 </script>
@@ -122,8 +129,10 @@
      function duplicate_work() {
          var clone_work = original_work.cloneNode(true); // "deep" clone
          clone_work.id = "work" + ++i;
-         clone_work.find('input').value(''); 
-         original_work.parentNode.appendChild(clone_work).find('input').value('');
+         clone_work.childNodes[1].value = '';
+         clone_work.childNodes[3].value = '';
+         clone_work.childNodes[5].value = '';
+         original_work.parentNode.appendChild(clone_work);
      }
 </script>
 
@@ -134,6 +143,8 @@
      function addmore_img() {
          var clone_img = original_img.cloneNode(true); // "deep" clone
          clone_img.id = "imgproof" + ++i;
+         console.log(clone_img.childNodes);
+         clone_img.childNodes[3].value = '';
          original_img.parentNode.appendChild(clone_img);
      }
 </script>

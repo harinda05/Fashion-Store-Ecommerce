@@ -9,7 +9,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/dbcon.php');
 
  /* Start Getting Form Values */
     $nic = $_POST['nic'];
-    $name=$_POST['name'];
+    $fname=$_POST['fname'];
     $bdate=$_POST['bdate'];
     $contactno=$_POST['contact'];
     $address = $_POST['address'];
@@ -110,7 +110,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/dbcon.php');
     
         // insert in to application table
 
-    $sql="INSERT INTO application (u_id,job_id,name,dob,address,contactno,email,education,work_experience,prof_q,cv,img,mark) VALUES ('$u_id','$job_id','$name','$bdate',' $address','$contactno','$email','$edu','$work_data', '$prof_data','$cvpath','$img_data',$tot_mark)";
+    $sql="INSERT INTO application (u_id,job_id,name,dob,address,contactno,email,education,work_experience,prof_q,cv,img,mark) VALUES ('$u_id','$job_id','$fname','$bdate',' $address','$contactno','$email','$edu','$work_data', '$prof_data','$cvpath','$img_data',$tot_mark)";
     $result = $connection->query($sql);
     
     var_dump($sql);

@@ -14,7 +14,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
      
     
       
-      $sqlid = "SELECT username FROM applicant WHERE username = '$session_username' AND password = '$session_password'";
+      $sqlid = "SELECT * FROM applicant WHERE username = '$session_username' AND password = '$session_password'";
       
 
       $querysql = mysqli_query($connection,$sqlid);
@@ -23,10 +23,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
          die('Invalid query: ' . mysqli_error());
       }
       
+
       $count = mysqli_num_rows($querysql);
 
+      while($row = $querysql -> fetch_assoc())
+        {
+          $u_id = $row["u_id"];
+        }
+        var_dump($u_id);
       if($count == 1) {
           $_SESSION['nID'] = 1;
+          $_SESSION['u_id'] = $u_id;
 
          header("Location:/fashion/pages/applicant/applicant_home.php");
       

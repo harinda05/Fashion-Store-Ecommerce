@@ -9,6 +9,9 @@
 	<input type="text" placeholder="Title" name="title" id ="title"/> </div>
 
 	<div>
+	<input type="text" placeholder="Job Position" name="position" id ="position"/> </div>
+
+	<div>
 	<input type="text" placeholder="Description" name="desc" id ="desc"/></div>
 
      <div id="post_date" hidden>

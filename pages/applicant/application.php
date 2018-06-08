@@ -19,7 +19,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/session.php');
 	<input type="text" placeholder="NIC" name="nic" id ="nic"/> </div>
 
 	<div>
-	<input type="text" placeholder="Full Name" name="name" id ="name"/></div>
+	<input type="text" placeholder="Full Name" name="fname" id ="name"/></div>
 
      <div id="date">
           <label>DOB:</label>

@@ -4,7 +4,7 @@
 
 
 
-require($_SERVER['DOCUMENT_ROOT'] . '/fashion/header.php');
+require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/header_logged.php');
 
 require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/session.php');
 

@@ -18,7 +18,7 @@ div{
 
 /*header*/
 .header{
-	height: 120px;
+	height: 75px;
 	background-color: #00204A;
 }
 
@@ -78,24 +78,24 @@ div{
 
 /*menu bar*/
 .menu{
-	width: 350px;
+	width: 400px;
 	float: right;
 }
 
 .menu ul{
 	list-style-type: none;
-    margin: 0;
-    padding: 10px;
-    padding-top: 30px;
-    overflow: hidden;
-    /*position: fixed;*/
+    /*margin: 0;*/
+    /*padding: 10px;*/
+    /*padding-top: 30px;*/
+    /*overflow: hidden;*/
+    /*position: fixed;
     /*top: 0;
     width: 100%;*/
-    background-color:  ;
 }
 
 .menu li{
 	float: right;
+
 }
 
 .menu li a{
@@ -109,6 +109,48 @@ div{
 .menu a:hover {
 	background-color: #FFA500;
 	color: black;
+}
+
+.dropbtn {
+    background-color: #00204A;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    float: right;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #00204A;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 5;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #FFA500}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #FFA500;
+    color: black;
 }
 
 /*footer*/
@@ -183,13 +225,10 @@ div{
 	text-align: center;
 }
 
-.dept1 h1{
-	color: #00204A;
-	text-align: center;
-	font-weight: all;
-	/*font-size: 4	0px;*/
+.dept1 a{
+	text-decoration: none;
+	color: black;
 }
-
 
 /*hrdept*/
 .dept2{
@@ -206,11 +245,9 @@ div{
 	text-align: center;
 }
 
-.dept2 h1{
-	color: #00204A;
-	text-align: center;
-	font-weight: all;
-	/*font-size: 4	0px;*/
+.dept2 a{
+	text-decoration: none;
+	color: black;
 }
 
 /*marketing*/
@@ -227,13 +264,11 @@ div{
 	margin-bottom: 3%;
 	text-align: center;
 }
-
-.dept3 h1{
-	color: #00204A;
-	text-align: center;
-	font-weight: all;
-	/*font-size: 4	0px;*/
+.dept3 a{
+	text-decoration: none;
+	color: black;
 }
+
 /*IT*/
 .dept4{
 	background-image: url(..img/IT.jpg);
@@ -249,11 +284,9 @@ div{
 	text-align: center;
 }
 
-.dept4 h1{
-	color: #00204A;
-	text-align: center;
-	font-weight: all;
-	/*font-size: 4	0px;*/
+.dept4 a{
+	text-decoration: none;
+	color: black;
 }
 /*Production*/
 .dept5{
@@ -270,11 +303,9 @@ div{
 	text-align: center;
 }
 
-.dept5 h1{
-	color: #00204A;
-	text-align: center;
-	font-weight: all;
-	/*font-size: 4	0px;*/
+.dept5 a{
+	text-decoration: none;
+	color: black;
 }
 
 
@@ -286,8 +317,8 @@ div{
 /*login*/
 .form{
 	background-color: #fbf7f7;
-	width: 30%;
-	margin-left: 32%;
+	width: 25%;
+	margin-left: 35%;
 	margin-top: 50px;
 	margin-bottom: 50px;
 	padding: 3%;
@@ -353,7 +384,7 @@ div{
 
 }
 
-.admin_login input[type=text], input[type=password] {
+.admin_login input[type=text], .admin_login input[type=password] {
     width: 90%;
     padding: 15px;
     margin: 5px 0 22px 0;
@@ -382,3 +413,91 @@ div{
 
 }
 
+
+
+
+/*view jobs*/
+.view_jobs{
+	padding: 5%;
+	padding-top: 20px;
+}
+
+.view_jobs h1{
+	text-align: center;
+	font-size: 30px;
+	font-weight: normal;
+}
+
+.job {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.job  td, .job  th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.job  tr:nth-child(even){background-color: #f2f2f2;}
+
+.job tr:hover {background-color: #ddd;}
+
+.job  th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #FFA500;
+    color: white;
+}
+
+.dept_heading{
+	height: 100px;
+	background-color: #fbf7f7;
+	margin-top: 3%;
+}
+
+.view_btn{
+	background-color: #FFA500;
+	/*color: white;*/
+	display: inline-block;
+	cursor: pointer;
+	height: 30px;
+	width: 65px;
+	border-style: none;
+	margin: 13px;
+	border-radius: 5px;
+	text-align: center;
+	font-size: 15px;
+}
+
+.view_job{
+	padding: 20px;
+	border-style: groove;
+	margin: 30px 15%;
+	/*justify-content: initial;*/
+}
+
+.view_job h2{
+	color: #00204A;
+	text-align: center;
+}
+
+.view_job button{
+	background-color: #FFA500;
+	/*color: white;*/
+	display: inline-block;
+	cursor: pointer;
+	height: 50px;
+	width: 200px;
+	border-style: none;
+	margin: 15px;
+	border-radius: 5px;
+	text-align: center;
+	font-size: 18px;
+}
+.view_job button a{
+	text-decoration: none;
+	color: black;
+}

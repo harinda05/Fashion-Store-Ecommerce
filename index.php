@@ -37,19 +37,19 @@
 				<h1>Find your job at any Department</h1>
 			</div>
 			<div class="dept1">
-				<button class="dept_btn">Finance Department</button>
+				<button class="dept_btn" onclick="location.href='/fashion/pages/view_jobs?dept_id=1'">Finance Department</button>
 			</div>
 			<div class="dept2">
-				<button class="dept_btn">Human Resource Department</button>
+				<button class="dept_btn" onclick="location.href='/fashion/pages/view_jobs?dept_id=2'">Human Resource Department</button>
 			</div>
 			<div class="dept3">
-				<button class="dept_btn">Marketing Department</button>
+				<button class="dept_btn" onclick="location.href='/fashion/pages/view_jobs?dept_id=3'">Marketing Department</button>
 			</div>
 			<div class="dept4">
-				<button class="dept_btn">IT Department</button>
+				<button class="dept_btn" onclick="location.href='/fashion/pages/view_jobs?dept_id=4'">IT Department</button>
 			</div>
 			<div class="dept5">
-				<button class="dept_btn">Production Department</button>
+				<button class="dept_btn" onclick="location.href='/fashion/pages/view_jobs?dept_id=5'">Production Department</button>
 			</div>
 			
 		</div>

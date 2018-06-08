@@ -3,18 +3,19 @@
 <?php 
 
 
-
+require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/session.php');
 require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/header_logged.php');
 
-require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/session.php');
+
 
 
 ?>
 	<div class="containerf">
 
-	<form class="add" method="POST" action="../../php/apply.php" enctype="multipart/form-data">
+	<form class="add" method="POST" action="../../php/apply.php?u_id=<?php echo $_SESSION['u_id'] ?>" enctype="multipart/form-data">
 
 				<h2>Apply for this Job</h2><br>
+  <?php echo'<input type="hidden" name="job_id" value='.$_GET['job_id'].'>';?>
 	<div>
 	<input type="text" placeholder="NIC" name="nic" id ="nic"/> </div>
 

@@ -15,10 +15,18 @@
 	<div class="header" >
 		<a href="/fashion/index.php"><img src="/fashion/img/logo.png" height="100px" width="150px"></a>
 		<div class="menu">
-			<ul>
+			<ul>				
 				<li><a href="#Help">Help</a></li>
 				<li><a href="#contact">Contact</a></li>
-				<li><a href="/fashion/pages/applicant/login.php">Log Out</a></li>
+				<li>
+					<div class="dropdown">
+					<button class="dropbtn">Profile</button>
+  					<div class="dropdown-content">
+					    <a href="#">View Applications</a>
+					    <a href="#">Log Out</a>
+  					</div>
+				</div>
+				</li>
 			</ul>
 		</div>
 	</div>

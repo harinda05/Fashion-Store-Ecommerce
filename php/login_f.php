@@ -29,11 +29,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
       while($row = $querysql -> fetch_assoc())
         {
           $u_id = $row["u_id"];
+          $username = $row["username"];
         }
         var_dump($u_id);
       if($count == 1) {
           $_SESSION['nID'] = 1;
           $_SESSION['u_id'] = $u_id;
+          $_SESSION['uname'] = $username;
 
          header("Location:/fashion/pages/applicant/applicant_home.php");
       

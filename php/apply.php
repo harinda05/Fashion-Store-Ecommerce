@@ -2,10 +2,13 @@
 
 
 <?php
+session_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/dbcon.php');
 
-    $u_id =1;
-    $job_id = 4;
+    $u_id = $_SESSION['u_id'];
+    $job_id = $_POST['job_id'][0];
+
+    var_dump($job_id);
 
  /* Start Getting Form Values */
     $nic = $_POST['nic'];

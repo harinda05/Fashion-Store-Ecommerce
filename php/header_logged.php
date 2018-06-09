@@ -22,7 +22,7 @@
 					<div class="dropdown">
 					<button class="dropbtn">Profile</button>
   					<div class="dropdown-content">
-					    <a href="#">View Applications</a>
+					    <a href="/fashion/pages/applicant/view_app.php">View Applications</a>
 					    <a href="#">Log Out</a>
   					</div>
 				</div>

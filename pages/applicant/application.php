@@ -107,10 +107,10 @@ require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/header_logged.php');
 
      <br>
 
-	<div style="padding-left: 37%;">
-	   <input type="submit" value="Submit" />    
-	   <input type="submit" value="Cancel"/>
-  </div>
+      <div style="padding-left: 37%;">
+        <input style="background-color:#4CAF50;" type="submit" value="Submit" /> 
+        <input style="background-color: #f44336;" type="submit" value="Cancel"/>
+      </div>
 
   </div>	
 

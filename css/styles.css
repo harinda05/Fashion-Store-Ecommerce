@@ -639,3 +639,105 @@ div{
 	margin-top: 30px;
 	margin-bottom: 30px;
 }
+
+/*detailed application form*/
+.detailed_app{
+	margin: 50px 30px;
+	padding: 20px;
+	border: groove;
+}
+
+.detailed_app_heading{
+	background-color: #d1cccc;
+	padding: 5px;
+	padding-left: 50px;
+}
+
+.detailed_app_content{
+	background-color: #fbf7f7;
+	margin-top: 30px;
+	padding: 40px;
+}
+
+.detailed_app_content li {
+	padding: 7px;
+}
+
+.detailed_app_content ol.a{
+	list-style-type: lower-alpha;
+}
+
+.app_tbl{
+ padding: 10px;
+}
+
+.app_tbl  td, .job  th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.app_tbl tr:nth-child(even){background-color: #f2f2f2;}
+
+.app_tbl th {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
+    background-color: #d1cccc;
+    color: black;
+}
+
+.dep_app_content input[type=text], input[type=password], input[type=date], input[type=tmail] {
+    width: 93%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+.dep_app_content input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.dep_app_content input[type=submit]{
+    background-color: #FFA500;
+    /*color: white;*/
+    display: inline-block;
+    border-radius: 5px;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    opacity: 0.9;
+    font-size: 18px;
+}
+
+.dep_app_content input[type=button], input[type=file] {
+	 /*background-color: #FFA500;*/
+    /*color: white;*/
+    display: inline-block;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 5px 0;
+    border: none;
+    cursor: pointer;
+    width: 8%;
+    opacity: 0.9;
+    font-size: 15px;
+}
+
+.dep_app_content input[type=file] {
+    display: inline-block;
+    cursor: pointer;
+    width: 30%;
+}
+
+.dep_app_content{
+	padding: 30px;
+	background-color: #fbf7f7;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}

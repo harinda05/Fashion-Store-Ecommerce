@@ -23,7 +23,7 @@
 				<td>Harinda</td>
 				<td>80</td>
 				<td>
-					<button class="view_btn"><a style="text-decoration: none; color: black;" href="#">View</a></button>
+					<button class="view_btn"><a style="text-decoration: none; color: black;" href="/fashion/pages/client/detailed_app.php">View</a></button>
 				</td>
 			</tr>
 			<tr>

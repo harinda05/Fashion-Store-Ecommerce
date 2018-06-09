@@ -15,7 +15,12 @@
 	<?php
 	session_start();
 	if (isset($_SESSION['nID'])){
-		require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/header_logged.php');
+
+		if ($_SESSION["role"] == 'user' ){
+		require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/header_logged.php');}
+
+		if ($_SESSION["role"] == 'client' ){
+		require($_SERVER['DOCUMENT_ROOT'] . '/fashion/client_header.php');}
 	} 
 
 	else{

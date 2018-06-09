@@ -1,6 +1,14 @@
-<?php include '../../client_header.php';  ?>
 
-<div class="container">
+<?php 
+	require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/session.php');
+
+    require($_SERVER['DOCUMENT_ROOT'] . '/fashion/client_header.php');
+
+  	$u_id = $_SESSION['u_id'];
+
+    require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/dbcon.php');
+
+    echo '<div class="container">
 
 	<div class="dept_app">
 		<div class="dept_app_heading">
@@ -14,27 +22,55 @@
 				<th>Job Position</th>
 				<th style="width: 20%;">Closing Date</th>
 				<th style="width: 20%;" >Job Applications</th>
-			</tr>
-			<tr>
-				<td>Clerk</td>
-				<td>20/07/2018</td>
+			</tr>';
+
+   $sql = "SELECT * FROM jobs WHERE u_id=$u_id";
+   $result=mysqli_query($connection,$sql);
+
+   if(mysqli_num_rows($result)>0){
+   	while($row = $result -> fetch_assoc()){
+   		echo'
+   			<tr>
+
+				<td>'.$row["position"].'</td>
+				<td>'.$row["closing_date"].'</td>
 				<td>
-					<button class="view_btn"><a style="text-decoration: none; color: black;" href="/fashion/pages/client/view_dept_app.php">View</a></button>
+					<button class="view_btn"><a style="text-decoration: none; color: black;" href="/fashion/pages/client/view_dept_app.php?job_id='.$row["job_id"].'">View</a></button>
 				</td>
-			</tr>
-			<tr>
-				<td>Accountant</td>
-				<td>>12/10/2018</td>
-				<td>
-					<button class="view_btn"><a style="text-decoration: none; color: black;" href="#">View</a></button>
-				</td>
-			</tr>
-			</table>
+   		';
+   	}
+   }
+var_dump($row["job_id"]);
+   echo'</table>
 
 		</div>
 		
 	</div>
-</div>
+</div>';
+
+?>
+
+<? require($_SERVER['DOCUMENT_ROOT'] . '/fashion/footer.php'); ?>
 
 
-<?php include '../../footer.php';  ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

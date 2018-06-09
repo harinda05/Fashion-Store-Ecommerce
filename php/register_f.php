@@ -13,7 +13,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST['password'];
      
     
-      $sql = "Insert into applicant (email,username,password) Values ('$email','$username','$password')";
+      $sql = "Insert into user (email,username,password,role) Values ('$email','$username','$password','user')";
 
       var_dump($email);
 

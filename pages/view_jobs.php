@@ -1,5 +1,5 @@
 <?php
-    require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/session.php');
+    
     require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/header_logged.php');
 
   

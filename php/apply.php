@@ -121,13 +121,13 @@ require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/dbcon.php');
        echo "<script language='javascript'>
                   window.alert('Application Sent')
                   window.location.href='/fashion';
-                 </script> "
+                 </script> ";
     }
     else{
        echo "<script language='javascript'>
                   window.alert('Application Failed. Please try again later')
                   window.location.href='/fashion';
-                 </script> "
+                 </script> ";
    }
 
 ?>

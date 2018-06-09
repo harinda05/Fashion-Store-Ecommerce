@@ -7,6 +7,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/session.php');
 
 
     $job_id = $_GET['job_id'];
+    $u_id = $_SESSION['u_id'];
    // $dept_id = $GET['dept_id'];
 
     $sql = "SELECT * FROM jobs INNER JOIN department ON jobs.dept_id=department.dept_id where jobs.job_id = $job_id";
@@ -37,11 +38,19 @@ var_dump($sql);
 
                 <h3>Closing Date</h3>
         
-                <p>'.$row['closing_date'].'</p>
-        
-                <button><a href="/fashion/pages/applicant/application.php?job_id='.$row['job_id'].'">Apply</a></button>
+                <p>'.$row['closing_date'].'</p>';
+
+                $app_sql = "SELECT * FROM application where job_id = $job_id AND u_id =$u_id";
+                $query_app_sql=mysqli_query($connection,$app_sql);
                 
-            </div>
+                if(mysqli_num_rows($query_app_sql)>0 ){
+                    echo'<label> You Have Already Applied For this Job </label>';
+                }
+
+                elseif(!$query_app_sql || mysqli_num_rows($query_app_sql)==0){
+                echo '<button><a href="/fashion/pages/applicant/application.php?job_id='.$row['job_id'].'">Apply</a></button>';}
+                
+            echo'</div>
             
         
             </div>';

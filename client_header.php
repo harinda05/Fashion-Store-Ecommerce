@@ -13,7 +13,7 @@
 
 	<!-- Header -->
 	<div class="header" >
-		<a href="/fashion/pages/dashboard.php"><img src="/fashion/img/logo.png" height="50px" width="70px"></a>
+		<a href="/fashion/pages/client_dashboard.php"><img src="/fashion/img/logo.png" height="50px" width="70px"></a>
 
 		<div class="menu">
 			<ul>

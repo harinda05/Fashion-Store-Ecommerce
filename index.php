@@ -12,7 +12,16 @@
 <body>
 
 	<!-- Header -->
-	<?php include 'header.php' ?>
+	<?php
+	session_start();
+	if (isset($_SESSION['nID'])){
+		require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/header_logged.php');
+	} 
+
+	else{
+		include 'header.php';
+	}
+	?>
 
 	<!-- /Header -->
 

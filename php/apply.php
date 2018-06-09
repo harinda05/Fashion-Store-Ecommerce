@@ -6,7 +6,7 @@ session_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/dbcon.php');
 
     $u_id = $_SESSION['u_id'];
-    $job_id = $_POST['job_id'][0];
+    $job_id = $_POST['job_id'];
 
     var_dump($job_id);
 
@@ -118,10 +118,16 @@ require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/dbcon.php');
     
     var_dump($sql);
     if($result){
-       echo 'success';
+       echo "<script language='javascript'>
+                  window.alert('Application Sent')
+                  window.location.href='/fashion';
+                 </script> "
     }
     else{
-        echo 'failed';
+       echo "<script language='javascript'>
+                  window.alert('Application Failed. Please try again later')
+                  window.location.href='/fashion';
+                 </script> "
    }
 
 ?>

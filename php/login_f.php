@@ -14,7 +14,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
      
     
       
-      $sqlid = "SELECT * FROM applicant WHERE username = '$session_username' AND password = '$session_password'";
+      $sqlid = "SELECT * FROM user WHERE username = '$session_username' AND password = '$session_password'";
       
 
       $querysql = mysqli_query($connection,$sqlid);
@@ -30,26 +30,39 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         {
           $u_id = $row["u_id"];
           $username = $row["username"];
-        }
-        var_dump($u_id);
-      if($count == 1) {
+
           $_SESSION['nID'] = 1;
+          $_SESSION['role'] = $row["role"];
           $_SESSION['u_id'] = $u_id;
           $_SESSION['uname'] = $username;
 
-         header("Location:/fashion/pages/applicant/applicant_home.php");
-      
+           if($count == 1 and $row["role"]=='user') {
+                    header("Location:/fashion/");
+                }
 
-		  }
+            if($count == 1 and $row["role"]=='admin') {
+                    header("Location:/fashion/pages/Admin/dashboard");
+                }
 
-      else{
+            if($count == 1 and $row["role"]=='client') {
+                    header("Location:/fashion/");
+                }
+
+            else{
           echo "<script language='javascript'>
                   window.alert('Invalid Username or Password')
                   window.location.href='/fashion/pages/applicant/login.php';
                  </script> "
-                  ;
+                  ; }
+
+        }
+        var_dump($u_id);
+          
+     
+
+      
 
          
-      }
+     
 }
  ?>     

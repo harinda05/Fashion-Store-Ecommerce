@@ -7,55 +7,61 @@ require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/session.php');
 require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/header_logged.php');
 
 
-
-
 ?>
-	<div class="containerf">
+
+
+	<div class="container">
 
 	<form class="add" method="POST" action="../../php/apply.php?u_id=<?php echo $_SESSION['u_id'] ?>" enctype="multipart/form-data">
 
-				<h2>Apply for this Job</h2><br>
-  <?php echo'<input type="hidden" name="job_id" value='.$_GET['job_id'].'>';?>
-	<div>
-	<input type="text" placeholder="NIC" name="nic" id ="nic"/> </div>
+    <div class="app_heading">
+      <h2 style="font-size: 30px; color: #00204A; text-align: center; padding: 30px; font-weight: normal;">Application Form
+      <hr style="border: 1.5px solid #00204A; margin-bottom: 0px; width: 20%;">
+      </h2>
+    </div>
 
-	<div>
-	<input type="text" placeholder="Full Name" name="fname" id ="name"/></div>
+    <div class="app_form">
 
-     <div id="date">
-          <label>DOB:</label>
-          <input type="date" name="bdate"/>
+    <div>
+      <input type="text" placeholder="NIC" name="nic" id ="nic"/>
+    </div>
 
-     </div>
+	  <div>
+      <input type="text" placeholder="Full Name" name="fname" id ="name"/>
+    </div>
 
-     <div>
-  <input type="text" placeholder="contact no" name="contact" id ="contact"/> </div>
+    <div id="date">
+      <label>DOB:</label>
+      <br>
+      <input type="date" name="bdate"/>
+    </div>
 
-     <div>
-     <input type="text" placeholder="Address" name="address" id ="address"/></div>
+    <div>
+      <input type="text" placeholder="contact no" name="contact" id ="contact"/>
+    </div>
 
-     <div>
-     <input type="tmail" placeholder="Email" name="email" id ="email"/></div>
-	
+    <div>
+      <input type="text" placeholder="Address" name="address" id ="address"/>
+    </div>
 
-	
+    <div>
+      <input type="tmail" placeholder="Email" name="email" id ="email"/>
+    </div>
 
-
-	
-	<div>
-          <label> Highest Educational Qualification </label>
+    <div>
+      <label> Highest Educational Qualification </label>
      	<select id="form-control"  name="edu">
-                                             <option >Post Graduate</option>
-                                             <option >Graduate</option>
-                                             <option >Advanced Level</option>
-                                             <option >Ordinary Level</option>
-                                                    </select> </div>
-	
+        <option >Post Graduate</option>
+        <option >Graduate</option>
+        <option >Advanced Level</option>
+        <option >Ordinary Level</option>
+      </select>
+    </div>
 
+    <br>
 
-
-	<div id='container_prof'>
-          <label>Professional Qualifications</label>
+    <div id='container_prof'>
+      <label>Professional Qualifications</label>
           <div id='prof'>
                <input type="text" placeholder="Year" name="prof_year[]" />
                <input type="text" placeholder="Qualification" name="prof_qual[]" />
@@ -65,6 +71,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/header_logged.php');
           <input type='button' id="prof_button" onclick="duplicate_prof()" value='Add More'>
      </div>
 
+     <br>
 
      <div id='container_work'>
           <label>Work Experience</label>
@@ -77,34 +84,41 @@ require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/header_logged.php');
           <input type='button' id="work_button" onclick="duplicate_work()" value='Add More'>
      </div>
 
+     <br>
+
      <div>
-          <label>CV: </label>
+          <label>Curriculum Vitae (CV) : </label>
           <input  type="file" name="cv">
      </div>
+
+     
+
      <div id='container_img'>
        <div id='imgproof'>
-            <label>Attach Image </label>
+            <label>Attach Image : </label>
             <input  type="file" name="img_proof[]" >
         </div>
+
+        <br>
+
         <input type='button' id="img_button" onclick="addmore_img()" value='Add More'>
        
      </div>
-	<div>
-	<input type="submit" value="submit" /> 
-	<input type="submit" value="Cancel"/></div>
 
-			
+     <br>
+
+	<div style="padding-left: 37%;">
+	   <input type="submit" value="Submit" />    
+	   <input type="submit" value="Cancel"/>
+  </div>
+
+  </div>	
 
 	</form>
-		</div>
+	</div>
 
 
-	<?php
-require($_SERVER['DOCUMENT_ROOT'] . '/fashion/footer.php'); ?>
-
-
-
-</body>
+<!-- java script -->
 
 <script type="text/javascript">
      var i = 0;
@@ -150,4 +164,5 @@ require($_SERVER['DOCUMENT_ROOT'] . '/fashion/footer.php'); ?>
      }
 </script>
 
-</html>
+
+<?php require($_SERVER['DOCUMENT_ROOT'] . '/fashion/footer.php'); ?>

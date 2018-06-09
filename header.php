@@ -25,7 +25,7 @@
 
 		<!-- after logged in -->
 
-		<!-- <div class="menu">
+	<!-- 	<div class="menu">
 			<ul>				
 				<li><a href="#Help">Help</a></li>
 				<li><a href="#contact">Contact</a></li>
@@ -33,12 +33,12 @@
 					<div class="dropdown">
 					<button class="dropbtn">Profile</button>
   					<div class="dropdown-content">
-					    <a href="#">View Applications</a>
+					    <a href="/fashion/pages/applicant/view_app.php">View Applications</a>
 					    <a href="#">Log Out</a>
   					</div>
 				</div>
 				</li>
-				<li><a>Name</a></li> -->  <!-- put the username here -->
+				<li><a>Name</a></li -->>  <!-- put the username here -->
 			<!-- </ul>
 		</div> -->
 

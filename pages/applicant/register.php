@@ -32,6 +32,8 @@
 
     		<label for="password"><b>Password</b></label>
     		<input type="password" placeholder="Enter Password" name="password" required>
+
+    		<p style="text-align: center;">By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a></p>
 			
 			<input type='submit' value='Register'>
 			</form>

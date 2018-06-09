@@ -321,7 +321,7 @@ div{
 	margin-left: 35%;
 	margin-top: 50px;
 	margin-bottom: 50px;
-	padding: 3%;
+	padding: 4%;
 	box-shadow: 0px 4px 10px 4px #00204A;
 }
 
@@ -454,7 +454,7 @@ div{
 
 .dept_heading{
 	height: 100px;
-	background-color: #fbf7f7;
+	background-color: #00204A	;
 	margin-top: 3%;
 }
 
@@ -500,4 +500,75 @@ div{
 .view_job button a{
 	text-decoration: none;
 	color: black;
+}
+
+/*application form*/
+
+.app_heading{
+	height: 100px;
+	background-color: #fbf7f7	;
+	margin-top: 3%;
+}
+
+.app_form{
+	height: auto;
+	padding: 30px 20px 30px 80px;
+	border-style: groove;
+	margin: 30px 150px;
+}
+
+.app_form input[type=text], input[type=password], input[type=date], input[type=tmail] {
+    width: 93%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+.app_form input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.app_form input[type=submit]{
+    background-color: #FFA500;
+    /*color: white;*/
+    display: inline-block;
+    border-radius: 5px;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    opacity: 0.9;
+    font-size: 18px;
+}
+
+.app_form input[type=button], input[type=file] {
+	 /*background-color: #FFA500;*/
+    /*color: white;*/
+    display: inline-block;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 5px 0;
+    border: none;
+    cursor: pointer;
+    width: 8%;
+    opacity: 0.9;
+    font-size: 15px;
+}
+
+.app_form input[type=file] {
+    display: inline-block;
+    cursor: pointer;
+    width: 30%;
+}
+
+
+/*view my applications*/
+.my_app_heading{
+	height: 100px;
+	background-color: #fbf7f7;
+	margin-top: 3%;
 }

@@ -13,7 +13,7 @@
 
 	<!-- Header -->
 	<div class="header" >
-		<a href="/fashion/index.php"><img src="/fashion/img/logo.png" height="100px" width="150px"></a>
+		<a href="/fashion/index.php"><img src="/fashion/img/logo.png" height="50px" width="70px"></a>
 		<div class="menu">
 			<ul>				
 				<li><a href="#Help">Help</a></li>

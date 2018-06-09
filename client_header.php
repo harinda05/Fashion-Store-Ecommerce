@@ -18,7 +18,7 @@
 		<div class="menu">
 			<ul>
 				<li><a href="#">Log Out</a></li>
-				<li><a href="#">Post Jobs</a></li>
+				<li><a href="/fashion/pages/client/job.php">Post Jobs</a></li>
 				<li><a href="/fashion/pages/client/view_dept_jobs.php">View Jobs</a></li>
 				
 			</ul>

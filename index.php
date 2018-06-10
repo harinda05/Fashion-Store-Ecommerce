@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="stylesheet" type="text/css" href="assests/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 
 </head>
 <body>
@@ -21,8 +21,12 @@
 
 		if ($_SESSION["role"] == 'client' ){
 		require($_SERVER['DOCUMENT_ROOT'] . '/fashion/client_header.php');}
-	} 
+	
 
+	if ($_SESSION["role"] == 'admin' ){
+		require($_SERVER['DOCUMENT_ROOT'] . '/fashion/admin_header.php');
+	} 
+}
 	else{
 		include 'header.php';
 	}

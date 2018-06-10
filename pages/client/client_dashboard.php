@@ -14,7 +14,7 @@ if ($_SESSION["role"] == 'client' ){
 		<button class="button button_chg"><a href="/fashion/pages/client/view_dept_jobs.php"View Jobs</a></button>
 	</div>
 	
-</div>;
+</div>';
 }
 
 else{

@@ -1,6 +1,9 @@
-<?php include '../../admin_header.php';  ?>
+<?php 
+require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/session.php');
+include '../../admin_header.php';
+require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/dbcon.php');
 
-<div class="container">
+	echo'<div class="container">
 
 	<div class="delete_client">
 
@@ -14,38 +17,37 @@
 				<th style="width: 20%;">Department</th>
 				<th style="width: 20%;" >Username</th>
 				<th style="width: 10%;">Action</th>
-			</tr>
-			<tr>
-				<td>Finance</td>
-				<td>Client1</td>
-				<td><button class="deletebtn">Delete</button></td>
-			</tr>
-			<tr>
-				<td>HR</td>
-				<td>Client2</td>
-				<td><button class="deletebtn">Delete</button></td>
-			</tr>
-			<tr>
-				<td>Marketing</td>
-				<td>Client3</td>
-				<td><button class="deletebtn">Delete</button></td>
-			</tr>
-			<tr>
-				<td>IT</td>
-				<td>Client4</td>
-				<td><button class="deletebtn">Delete</button></td>
-			</tr>
-			<tr>
-				<td>Operational</td>
-				<td>Client5</td>
-				<td><button class="deletebtn">Delete</button></td>
-			</tr>
-		</table>
+			</tr>';
+
+$sql="SELECT * FROM user INNER JOIN client_department ON user.u_id=client_department.u_id where role='client'";
+$result=mysqli_query($connection,$sql);
+    if($result){
+    	while($row = $result -> fetch_assoc()){
+    		echo $row['u_id'];
+    	
+    		$get_dept = "SELECT department from department where dept_id=".$row["dept_id"]."";
+    		$query=mysqli_query($connection,$get_dept);
+    		while($row2 = $query -> fetch_assoc()){
+
+   
+			echo'<tr>
+				<td style="text-transform: uppercase;">'.$row2["department"].'</td>
+				<td>'.$row["username"].'</td>
+				<td>
+				<button class="deletebtn"><a style="text-decoration: none; color: black;" href="/fashion/php/deleteu.php?u_id='.$row["u_id"].'">Delete</a></button>
+
+				</td>
+			</tr>';
+			}}}
+
+		echo'</table>
 		</div>
 
 	</div>
 	
-</div>
+</div>';
+
+  ?>
 
 
 

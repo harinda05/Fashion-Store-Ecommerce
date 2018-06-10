@@ -73,7 +73,6 @@
 
 	<!-- Footer -->
 	<?php include 'footer.php';
-		echo ($_SESSION['role']);
 	 ?>
 
 	<!-- /Footer -->

@@ -1,6 +1,9 @@
-<?php include '../../client_header.php';  ?>
+<?php include '../../client_header.php';
+require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/session.php');
 
-<div class="container">
+$u_id=$_SESSION['u_id'];
+
+echo'<div class="container">
 
 	<div class="dept_app">
 
@@ -10,7 +13,7 @@
 
 		<div class="dep_app_content">
 
-		<form class="add" method="POST" action="../../php/add_job.php" enctype="multipart/form-data">
+		<form class="add" method="POST" action="../../php/add_job.php?u_id='.$u_id.'" enctype="multipart/form-data">
 
 			<div>
 				<input type="text" placeholder="Title" name="title" id ="title"/>
@@ -25,7 +28,7 @@
 			</div>
 
     		<div id="post_date" hidden>
-          		<input type="text" name="post_date" value="<?php echo date('Y-m-d')?>" />
+          		<input type="hidden" name="post_date" value="'.date("Y-m-d").'">
     		</div>
 
     		<div>
@@ -50,6 +53,6 @@
 
 		</div>
 	</div>
-</div>
-
+</div>';
+?>
 <?php include '../../footer.php';  ?>

@@ -23,7 +23,7 @@
 					<button class="dropbtn">Profile</button>
   					<div class="dropdown-content">
 					    <a href="/fashion/pages/applicant/myapplications.php">View Applications</a>
-					    <a href="#">Log Out</a>
+					    <a href="/fashion/php/logout.php">Log Out</a>
   					</div>
 				</div>
 				</li>

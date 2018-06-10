@@ -26,32 +26,33 @@ include('header.php');
     	<?php
 
 
-    	if (isset($_GET['search'])) {
     	 	$search_query = $_GET['user_query'];
+            $get_job="SELECT * FROM jobs INNER JOIN department ON jobs.dept_id=department.dept_id where position like '%$search_query%' OR title like '%$search_query%' ;";
 
-    	$get_job = "SELECT * FROM jobs WHERE position like '%$search_query%' OR title like '%$search_query%' ;";
+            var_dump($get_job);
+    	//$get_job = "SELECT * FROM jobs WHERE position like '%$search_query%' OR title like '%$search_query%' ;";
 
     	$run_job = mysqli_query($connection, $get_job);
 
-    	while ($row_job=$result -> fetch_assoc($run_job)) {
+    	while ($row_job=$run_job-> fetch_assoc()) {
     		
     		$position = $row_job['position'];
     		$closing_date = $row_job['closing_date'];
 
-    		 echo "   
-                    <tr>
+    		 echo   
+                    '<tr>
                     	<td>Department</td>
-                        <td>'. $row["position"] .'  </td>
+                        <td>'.$position.'  </td>
             
-                        <td>'. $row["closing_date"] .'  </td>
+                        <td>'.$closing_date.'  </td>
 
-                        <td>'. '<a href="/fashion/pages/job_description.php?job_id='.$row["job_id"].'">View</a> </td>
+                        <td>'. '<a href="/fashion/pages/job_description.php?job_id='.$row_job["job_id"].'">View</a> </td>
                     </tr>
                                     
-            ";
+            ';
     	}
 
-    	} 
+    	
 
     	?>
 

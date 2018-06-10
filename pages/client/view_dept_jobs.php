@@ -12,7 +12,7 @@
 
 	<div class="dept_app">
 		<div class="dept_app_heading">
-			<h2 style="font-weight: normal; font-size: 25px; padding: 0px;">View Jobs</h2>
+			<h2 style="font-weight: normal; font-size: 25px;">View Jobs</h2>
 		</div>
 
 		<div class="view_job_tbl">

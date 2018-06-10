@@ -45,7 +45,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/header_logged.php');
     </div>
 
     <div>
-      <input type="tmail" placeholder="Email" name="email" id ="email"/>
+      <input type="email" placeholder="Email" name="email" id ="email"/>
     </div>
 
     <div>

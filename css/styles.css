@@ -517,7 +517,7 @@ div{
 	margin: 30px 150px;
 }
 
-.app_form input[type=text], input[type=password], input[type=date], input[type=tmail] {
+.app_form input[type=text], input[type=password], input[type=date], input[type=email] {
     width: 93%;
     padding: 15px;
     margin: 5px 0 22px 0;
@@ -600,7 +600,7 @@ div{
 	background-color: #00204A;
 	/*margin-top: 3%;*/
 	/*text-align: center;*/
-	margin: 30px 0px 30px 0px;
+	margin: 30px 50px;
 	height: auto;
 }
 
@@ -611,7 +611,7 @@ div{
 }
 
 .view_job_tbl{
-	padding: 30px;
+	padding: 50px;
 	background-color: #fbf7f7;
 	margin-top: 30px;
 	margin-bottom: 30px;
@@ -619,22 +619,21 @@ div{
 
 /*view dept applications*/
 .dept_jobs{
-	height: 100px;
 	background-color: #d1cccc;
-	/*margin-top: 3%;*/
-	/*text-align: center;*/
-	margin: 30px 0px 30px 0px;
+	margin: 30px 50px;
 	height: auto;
 }
 
 .dept_jobs_heading{
+	/*height: 100px;*/
 	color: #00204A;
 	padding-top: 10px;
 	padding-left: 50px;
 }
 
 .view_app_tbl{
-	padding: 10px 30px;
+	padding: 10px 50px;
+	padding-bottom: 40px;
 	background-color: #fbf7f7;
 	margin-top: 30px;
 	margin-bottom: 30px;
@@ -642,14 +641,14 @@ div{
 
 /*detailed application form*/
 .detailed_app{
-	margin: 50px 30px;
+	margin: 30px 50px;
 	padding: 20px;
 	border: groove;
 }
 
 .detailed_app_heading{
 	background-color: #d1cccc;
-	padding: 5px;
+	padding: 10px;
 	padding-left: 50px;
 }
 
@@ -687,7 +686,7 @@ div{
     color: black;
 }
 
-.dep_app_content input[type=text], input[type=password], input[type=date], input[type=tmail] {
+.dep_app_content input[type=text], input[type=password], input[type=date], input[type=email] {
     width: 93%;
     padding: 15px;
     margin: 5px 0 22px 0;
@@ -696,7 +695,7 @@ div{
     background: #f1f1f1;
 }
 
-.dep_app_content input[type=text]:focus, input[type=password]:focus {
+.dep_app_content input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
     background-color: #ddd;
     outline: none;
 }
@@ -736,8 +735,97 @@ div{
 }
 
 .dep_app_content{
-	padding: 30px;
+	padding: 50px 100px 50px 150px;
 	background-color: #fbf7f7;
 	margin-top: 30px;
 	margin-bottom: 30px;
 }
+
+/*admin dashboard*/
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    display: block;
+    width: 250px;
+}
+
+.button_chg {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #FFA500;
+}
+
+.button_chg:hover {
+    background-color: #FFA500;
+    color: white;
+}
+
+.admin_dash{
+	padding: 50px;
+	padding-left: 42%;
+	height: 450px;
+}
+
+.admin_dash button a{
+	text-decoration: none;
+	color: black;
+}
+
+/*delete client*/
+.delete_client{
+	/*padding: 30px;*/
+	height: auto;
+	background-color: #fbf7f7;
+	margin: 30px 50px;
+
+}
+
+.delete_client  td, .job  th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.delete_client th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #FFA500;
+    color: white;
+}
+
+.deletebtn{
+	background-color: #f44336;
+	display: inline-block;
+	cursor: pointer;
+	height: 40px;
+	width: 80%;
+	border-style: none;
+	border-radius: 5px;
+	text-align: center;
+	font-size: 15px;
+}
+
+.delete_client_heading{
+	/*height: 100px;*/
+	background-color: #00204A;	
+	color: white ;
+	padding: 10px;
+	padding-left: 50px;
+}
+.delete_client_content{
+	padding: 50px;
+	padding-left: 37%;
+	background-color: #fbf7f7;
+}
+
+/*add client*/

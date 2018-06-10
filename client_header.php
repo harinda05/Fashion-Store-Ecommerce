@@ -13,18 +13,25 @@
 
 	<!-- Header -->
 	<div class="header" >
-		<a href="/fashion/pages/client_dashboard.php"><img style="top: 25px;" src="/fashion/img/logo.png" height="50px" width="70px"></a>
+		<a href="/fashion/pages/client/client_dashboard.php"><img style="top: 25px;" src="/fashion/img/logo.png" height="50px" width="70px"></a>
 
 		<div class="menu">
 			<ul>
+<<<<<<< HEAD
 				<li><a href="/fashion/php/logout.php">Log Out</a></li>
 				<li><a href="/fashion/pages/client/job.php">Post Jobs</a></li>
 				<li><a href="/fashion/pages/client/view_dept_jobs.php">View Jobs</a></li>
 				
+=======
+				<li><a href="#">Log Out</a></li>
+<!-- 				<li><a href="/fashion/pages/client/job.php">Post Jobs</a></li>
+				<li><a href="/fashion/pages/client/view_dept_jobs.php">View Jobs</a></li> -->
+>>>>>>> b72094e67ea7b423c3385d7b0b21525198c481d6
 			</ul>
 		</div>
 
 	</div>
+	
 	<div class="client_hd">
 		CLIENT DASHBOARD
 	</div>

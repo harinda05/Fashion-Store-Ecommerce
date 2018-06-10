@@ -575,14 +575,6 @@ div{
 
 
 /*client dashboard*/
-
-.client_dash_head{
-	text-align: center;
-	background-color: #fbf7f7;
-	padding: 140px 20px;
-	font-size: 25px;
-}
-
 .client_hd{
 	width: 100%;
 	background-color: #00204A;
@@ -823,9 +815,16 @@ div{
 	padding-left: 50px;
 }
 .delete_client_content{
-	padding: 50px;
-	padding-left: 37%;
+	padding: 50px 200px;
 	background-color: #fbf7f7;
 }
 
-/*add client*/
+.delete_client_content table tr td button{
+	width: 50%;
+}
+
+/*view orduser*/
+.ord_users{
+	background-color: #fbf7f7;
+	padding: 50px 20px;
+}

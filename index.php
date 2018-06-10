@@ -37,9 +37,9 @@
 	<!-- Slide Image -->
 	<div class="slide">
 		<div class="search_bar">
-			<form  method="get" action="#" enctype="multipart/form-data" >
-				<input class="search_form" type="search" name="#" placeholder="Job title or keywords" required="">
-				<button class="search_button">Find Job</button>
+			<form  method="get" action="results.php" enctype="multipart/form-data" >
+				<input class="search_form" type="search" name="user_query" placeholder="Job title or keywords" required="">
+				<button type="submit" name="search" class="search_button">Find Job</button>
 			</form>
 		</div>
 		

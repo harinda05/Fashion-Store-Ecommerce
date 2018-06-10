@@ -4,7 +4,7 @@ session_start();
 		if (!isset($_SESSION['nID']))
 
 		{
-		    header('Location:/fashion/pages/applicant/login.php');
+		    header('Location:/fashion/login.php');
 
 		}
 ?>

@@ -19,7 +19,7 @@
 				<li><a href="#Help">Help</a></li>
 				<li><a href="#contact">Contact</a></li>
 				<li><a href="/fashion/pages/applicant/register.php">Resgister</a></li>
-				<li><a href="/fashion/pages/applicant/login.php">Log In</a></li>
+				<li><a href="/fashion/login.php">Log In</a></li>
 			</ul>
 		</div>
 

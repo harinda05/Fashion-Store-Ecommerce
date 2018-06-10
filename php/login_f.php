@@ -48,10 +48,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                     header("Location:/fashion/");
                 }
 
-            else{
+           
+           if(!mysqli_num_rows($querysql)){
           echo "<script language='javascript'>
                   window.alert('Invalid Username or Password')
-                  window.location.href='/fashion/pages/applicant/login.php';
+                  window.location.href='/fashion/login.php';
                  </script> "
                   ; }
 

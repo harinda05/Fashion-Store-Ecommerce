@@ -18,16 +18,16 @@
 		<div class="menu">
 			<ul>
 				<li><a href="/fashion/php/logout.php">Log Out</a></li>
-			<!-- 	<li><a href="/fashion/pages/client/job.php">Post Jobs</a></li>
-				<li><a href="/fashion/pages/client/view_dept_jobs.php">View Jobs</a></li> -->
+			<li><a href="/fashion/pages/Admin/dashboard.php">Admin Dashboard</a></li>
+				<!--<li><a href="/fashion/pages/client/view_dept_jobs.php">View Jobs</a></li> -->
 				
 			</ul>
 		</div>
 
 	</div>
-	<div class="client_hd">
+	<!-- div class="client_hd">
 		ADMIN DASHBOARD
-	</div>
+	</div> -->
 
 	<!-- /Header -->
 

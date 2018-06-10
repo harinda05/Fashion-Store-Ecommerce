@@ -23,34 +23,35 @@ require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/header_logged.php');
     <div class="app_form">
 
     <div>
-      <input type="text" placeholder="NIC" name="nic" id ="nic"/>
+      <input type="text" placeholder="NIC" name="nic" id ="nic" required/>
     </div>
 
 	  <div>
-      <input type="text" placeholder="Full Name" name="fname" id ="name"/>
+      <input type="text" placeholder="Full Name" name="fname" id ="name" required/>
     </div>
 
     <div id="date">
       <label>DOB:</label>
       <br>
-      <input type="date" name="bdate"/>
+      <input type="date" name="bdate" required/>
     </div>
 
     <div>
-      <input type="text" placeholder="contact no" name="contact" id ="contact"/>
+      <input type="text" placeholder="contact no" name="contact" id ="contact" required/>
     </div>
 
     <div>
-      <input type="text" placeholder="Address" name="address" id ="address"/>
+      <input type="text" placeholder="Address" name="address" id ="address" required/>
     </div>
 
     <div>
-      <input type="email" placeholder="Email" name="email" id ="email"/>
+      <input type="email" placeholder="Email" name="email" id ="email" required/>
     </div>
 
     <div>
       <label> Highest Educational Qualification </label>
      	<select id="form-control"  name="edu">
+        <option value="">Select Qulaification</option>
         <option >Post Graduate</option>
         <option >Graduate</option>
         <option >Advanced Level</option>
@@ -63,12 +64,12 @@ require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/header_logged.php');
     <div id='container_prof'>
       <label>Professional Qualifications</label>
           <div id='prof'>
-               <input type="text" placeholder="Year" name="prof_year[]" />
-               <input type="text" placeholder="Qualification" name="prof_qual[]" />
-               <input type="text" placeholder="Institute" name="prof_inst[]" />
+               <input type="text" placeholder="Year" name="prof_year[]" required />
+               <input type="text" placeholder="Qualification" name="prof_qual[]" required />
+               <input type="text" placeholder="Institute" name="prof_inst[]" required />
           </div>
 
-          <input type='button' id="prof_button" onclick="duplicate_prof()" value='Add More'>
+          <input type='button' id="prof_button" onclick="duplicate_prof()" value='Add More' required>
      </div>
 
      <br>
@@ -76,19 +77,19 @@ require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/header_logged.php');
      <div id='container_work'>
           <label>Work Experience</label>
           <div id='work'>
-               <input type="text" placeholder="Post" name="work_post[]" />
-               <input type="text" placeholder="Duration" name="work_dur[]" />
-               <input type="text" placeholder="Institute" name="work_inst[]"/>
+               <input type="text" placeholder="Post" name="work_post[]"  required/>
+               <input type="text" placeholder="Duration" name="work_dur[]"  required/>
+               <input type="text" placeholder="Institute" name="work_inst[]" required/>
           </div>
 
-          <input type='button' id="work_button" onclick="duplicate_work()" value='Add More'>
+          <input type='button' id="work_button" onclick="duplicate_work()" value='Add More' required>
      </div>
 
      <br>
 
      <div>
           <label>Curriculum Vitae (CV) : </label>
-          <input  type="file" name="cv">
+          <input  type="file" name="cv" required>
      </div>
 
      
@@ -96,12 +97,12 @@ require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/header_logged.php');
      <div id='container_img'>
        <div id='imgproof'>
             <label>Attach Image : </label>
-            <input  type="file" name="img_proof[]" >
+            <input  type="file" name="img_proof[]" required >
         </div>
 
         <br>
 
-        <input type='button' id="img_button" onclick="addmore_img()" value='Add More'>
+        <input type='button' id="img_button" onclick="addmore_img()" value='Add More' required>
        
      </div>
 

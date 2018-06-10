@@ -44,10 +44,16 @@ require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/dbcon.php');
     
     var_dump($sql);
     if($result){
-       echo 'success';
+        echo "<script language='javascript'>
+                  window.alert('Job Added Successfully')
+                  window.location.href='/fashion/pages/client/view_dept_jobs.php';
+                 </script> ";
     }
     else{
-        echo 'failed';
+        echo "<script language='javascript'>
+                  window.alert('Error. Please Try Again Later')
+                  window.location.href='/fashion';
+                 </script> ";;
    }
 
 ?>

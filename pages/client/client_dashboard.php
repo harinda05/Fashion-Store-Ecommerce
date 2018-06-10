@@ -7,15 +7,18 @@ if ($_SESSION["role"] == 'client' ){
 
 	echo '
 
-<div class="client_dash_head">
-	<h1>Welcome to</h1>
-	<h1>Finance Department</h1>
-	<h1>Dashboard</h1>
-</div>';
+<div class="main_body">
+
+	<div class="admin_dash">
+		<button class="button button_chg"><a href="/fashion/pages/client/job.php">Post Jobs</a></button>
+		<button class="button button_chg"><a href="/fashion/pages/client/view_dept_jobs.php"View Jobs</a></button>
+	</div>
+	
+</div>;
 }
 
 else{
-	echo 'access denied';
+	echo 'Access Denied';
 }
 
 ?>

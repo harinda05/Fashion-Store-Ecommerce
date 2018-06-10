@@ -6,7 +6,7 @@ session_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/dbcon.php');
 
     $u_id = $_SESSION['u_id'];
-    $job_id = $_POST['job_id'];
+    $job_id = $_GET['job_id'];
 
     var_dump($job_id);
 
@@ -31,7 +31,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/dbcon.php');
         $work_count++;
     }
 
-    $work_data = serialize($data_work);
+    $work_data = base64_encode(serialize($data_work));
 
     // Prof Qualifications
     $prof_count=0;
@@ -40,7 +40,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/dbcon.php');
         $data_prof[] = [$val_prof, $_POST['prof_qual'][$prof_count], $_POST['prof_inst'][$prof_count]];
         $prof_count++;
     }
-    $prof_data = serialize($data_prof);
+    $prof_data = base64_encode(serialize($data_prof));
 
 
     // upload CV
@@ -70,7 +70,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/dbcon.php');
     $target = $_SERVER['DOCUMENT_ROOT'].'/fashion/images/application/images/'.$name;
 
     $imgpaths[]= $target;
-    $img_data = serialize($imgpaths);
+    $img_data = base64_encode(serialize($imgpaths));
      
     move_uploaded_file($temp,$target);
 }
@@ -113,9 +113,9 @@ require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/dbcon.php');
     
         // insert in to application table
 
-    $sql="INSERT INTO application (u_id,job_id,name,dob,address,contactno,email,education,work_experience,prof_q,cv,img,mark) VALUES ('$u_id','$job_id','$fname','$bdate',' $address','$contactno','$email','$edu','$work_data', '$prof_data','$cvpath','$img_data',$tot_mark)";
+    $sql="INSERT INTO application (u_id,job_id,name,dob,address,contactno,email,education,work_experience,prof_q,cv,img,mark,status) VALUES ('$u_id','$job_id','$fname','$bdate',' $address','$contactno','$email','$edu','$work_data', '$prof_data','$cvpath','$img_data',$tot_mark,'Received')";
     $result = $connection->query($sql);
-    
+  
     var_dump($sql);
     if($result){
        echo "<script language='javascript'>

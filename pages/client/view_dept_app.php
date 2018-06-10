@@ -1,6 +1,16 @@
-<?php include '../../client_header.php';  ?>
+<?php
+	
+	
+	require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/session.php');
 
-<div class="container">
+    require($_SERVER['DOCUMENT_ROOT'] . '/fashion/client_header.php');
+
+  	$job_id = $_GET['job_id'];
+  	$position = $_GET['position'];
+
+    require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/dbcon.php');
+
+    echo '<div class="container">
 
 	<div class="dept_jobs">
 		<div class="dept_jobs_heading">
@@ -9,37 +19,54 @@
 
 		<div class="view_app_tbl">
 
-			<h3>JOB POSITION : Clerk</h3>
+			<h3>JOB POSITION :'.$position.'</h3>
 			
 			<table class="job">
 			<tr>
-				<th>Position</th>
+	
 				<th style="width: 35%;">Name of the Applicant</th>
 				<th style="width: 15%;">Marks Obtained</th>
 				<th style="width: 15%;" >Details</th>
 			</tr>
-			<tr>
-				<td>Clerk</td>
-				<td>Harinda</td>
-				<td>80</td>
+			';
+
+	$sql = "SELECT * FROM application WHERE job_id=$job_id ORDER BY mark";
+    $result=mysqli_query($connection,$sql);
+    var_dump($sql);
+    if($result){
+    	while($row = $result -> fetch_assoc()){
+    		echo '<tr>
+				<td>'.$row["name"].'</td>
+				<td>'.$row["mark"].'</td>
 				<td>
-					<button class="view_btn"><a style="text-decoration: none; color: black;" href="/fashion/pages/client/detailed_app.php">View</a></button>
+					<button class="view_btn"><a style="text-decoration: none; color: black;" href="/fashion/pages/client/detailed_app.php?app_id='.$row["app_id"].'&position='.$position.'">View</a></button>
 				</td>
-			</tr>
-			<tr>
-				<td>Clerk</td>
-				<td>Dilanka</td>
-				<td>70</td>
-				<td>
-					<button class="view_btn"><a style="text-decoration: none; color: black;" href="#">View</a></button>
-				</td>
-			</tr>
-			</table>
+			</tr>';
+
+    	}
+    }
+
+    if(!$result){
+    	echo'<tr><td>No Applications Found</td></tr>';
+    }
+
+    echo '</table>
 
 		</div>
 		
 	</div>
-</div>
+</div>';
+
+?>
 
 
-<?php include '../../footer.php';  ?>
+<? require($_SERVER['DOCUMENT_ROOT'] . '/fashion/footer.php'); ?>
+
+
+
+
+
+
+
+
+

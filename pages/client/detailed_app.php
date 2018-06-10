@@ -1,28 +1,52 @@
-<?php include '../../client_header.php';  ?>
+<?php
+	
+	
+	require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/session.php');
 
-<div class="container">
+    require($_SERVER['DOCUMENT_ROOT'] . '/fashion/client_header.php');
+
+  	$app_id = $_GET['app_id'];
+  	$position = $_GET['position'];
+
+    require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/dbcon.php');
+
+    $sql = "SELECT * FROM application WHERE app_id=$app_id";
+    $result=mysqli_query($connection,$sql);
+ 
+    if($result){
+    	while($row = $result -> fetch_assoc()){
+
+    		
+    		$work_array = (unserialize(base64_decode($row['work_experience'])));
+    		
+    		$prof_array = (unserialize(base64_decode($row['prof_q'])));
+    		
+ 
+    		$img_array = (unserialize(base64_decode($row['img'])));
+    		
+    		echo '<div class="container">
 	
 	<div class="detailed_app">
 
 	<div class="detailed_app_heading">
 		<h2>Application Form</h2>
-		<h3>Job Position : Clerk</h3>
+		<h3>Job Position : '.$position.'</h3>
 	</div>
 
 	<div class="detailed_app_content">
 
 		<ol>
-			<li>Full Name : </li>
-			<li>Date of Birth : </li>
-			<li>Contact numbers 
-				<ol class="a">
-					<li>Resindence : </li>
-					<li>Mobile : </li>
-				</ol>
+			<li>Full Name :'.$row['name'].' </li>
+			<li>Date of Birth :'.$row['dob'].' </li>
+			<li>Address :'.$row['address'].' </li>
+			<li>Contact numbers:'.$row['contactno'].'
 			</li>
-			<li>Email Address : </li>
+			<li>Email Address :'.$row['email'].' </li>
 
-			<li>Higher Education Qualification</li>
+
+			<li>Higher Education Qualification:'.$row["education"].'</li>
+
+
 
 			<li>Professional Qualifications
 				<table class="app_tbl">
@@ -30,41 +54,86 @@
 						<th>Year</th>
 						<th>Qualification</th>
 						<th>Institute</th>
-					</tr>
-					<tr>
-						<td>2016</td>
-						<td>CIMA</td>
-						<td>Wisdom</td>
-					</tr>
-				</table>
+					</tr>';
+
+
+			//for ($x = 1; $x <= sizeof($prof_array); $x++){
+			
+			foreach($prof_array as $y => $value) {
+
+
+			
+					echo'<tr>
+						<td>'.$value[0].'</td>
+						<td>'.$value[1].'</td>
+						<td>'.$value[2].'</td>
+					</tr>';
+					}
+
+				echo'</table>
 			</li>
 
-			<li>Word Experience
+			<li>Work Experience
 				<table class="app_tbl">
 					<tr>
 						<th>Post</th>
 						<th>Duration</th>
 						<th>Institute</th>
-					</tr>
-					<tr>
-						<td>Accoutant</td>
-						<td>2012-2016</td>
-						<td>BOC</td>
-					</tr>
-				</table>
+					</tr>';
+
+			foreach($work_array as $z => $res) {
+					echo'<tr>
+						<td>'.$res[0].'</td>
+						<td>'.$res[1].'</td>
+						<td>'.$res[2].'</td>
+					</tr>';}
+			echo'</table>
 			</li>
 
-			<li>Curriculum Vitae (CV) : </li>
-			<li>Scanned Images : </li>
+			<li>Curriculum Vitae (CV) : 
 
-		</ol>
+			<a href="'.$row['cv'].'" download>
+  				<label> Download CV </label>
+			</a>
+
+			</li>
+			<li>Scanned Images : </li>';
+			foreach($img_array as $a => $resp) {
+				echo'<a href="'.$resp.'" download>
+  				<label> Download Image'.$a.' </label> <br>
+			</a>';
+			}
+		echo'</ol>
 		
 	</div>
 
 	</div>
 
 
-</div>
+</div>';
+
+    	}}
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <?php include '../../footer.php';  ?>

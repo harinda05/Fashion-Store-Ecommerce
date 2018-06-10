@@ -35,7 +35,7 @@
 				<td>'.$row["position"].'</td>
 				<td>'.$row["closing_date"].'</td>
 				<td>
-					<button class="view_btn"><a style="text-decoration: none; color: black;" href="/fashion/pages/client/view_dept_app.php?job_id='.$row["job_id"].'">View</a></button>
+					<button class="view_btn"><a style="text-decoration: none; color: black;" href="/fashion/pages/client/view_dept_app.php?job_id='.$row["job_id"].'&position='.$row["position"].'">View</a></button>
 				</td>
    		';
    	}

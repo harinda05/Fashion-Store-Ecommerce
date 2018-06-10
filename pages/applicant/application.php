@@ -12,7 +12,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/header_logged.php');
 
 	<div class="container">
 
-	<form class="add" method="POST" action="../../php/apply.php?u_id=<?php echo $_SESSION['u_id'] ?>" enctype="multipart/form-data">
+	<form class="add" method="POST" action="../../php/apply.php?u_id=<?php echo $_SESSION['u_id'] ?>&job_id=<?php echo $_GET['job_id'] ?>" enctype="multipart/form-data">
 
     <div class="app_heading">
       <h2 style="font-size: 30px; color: #00204A; text-align: center; padding: 30px; font-weight: normal;">Application Form

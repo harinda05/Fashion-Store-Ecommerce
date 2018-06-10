@@ -20,6 +20,7 @@
 				<th>Curriculum Vitae (CV)</th>
 				<th>Action</th>
 			</tr>
+			
 			<tr>
 				<td>Harinda</td>
 				<td>xx-xx-xxx</td>

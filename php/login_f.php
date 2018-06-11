@@ -18,13 +18,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
       
 
       $querysql = mysqli_query($connection,$sqlid);
-     
-     if (!$querysql) {
-         die('Invalid query: ' . mysqli_error());
-      }
-      
+
 
       $count = mysqli_num_rows($querysql);
+       
+           if($count==0){
+          echo "<script language='javascript'>
+                  window.alert('Invalid Username or Password')
+                  window.location.href='/fashion/login.php';
+                 </script> "
+                  ; }
+
+      var_dump($count);
 
       while($row = $querysql -> fetch_assoc())
         {
@@ -48,14 +53,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                     header("Location:/fashion/");
                 }
 
-           
-           if(!mysqli_num_rows($querysql)){
-          echo "<script language='javascript'>
-                  window.alert('Invalid Username or Password')
-                  window.location.href='/fashion/login.php';
-                 </script> "
-                  ; }
-
+          
         }
         
           

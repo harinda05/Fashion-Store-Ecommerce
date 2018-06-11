@@ -58,6 +58,8 @@
 
     $result=mysqli_query($connection,$sql);
 
+    if ($result){
+
     while($row = $result -> fetch_assoc())
                 {
                   echo '    
@@ -70,7 +72,11 @@
                     </tr>
                                     
                             ' ;
-                }
+                }}
+               
+   if(!$result || mysqli_num_rows($result)==0) {
+        echo'<tr><td colspan="3"> This Department Does Not Have Current Vacancies</td></tr>';
+    }
 
     echo '</table>
         

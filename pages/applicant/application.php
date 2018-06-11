@@ -168,7 +168,7 @@ if ($_SESSION["role"] == 'user' ){
 
 
 
-<<<<<<< HEAD
+
 <?php 
 }
 
@@ -178,9 +178,6 @@ else{
                   window.location.href='/fashion';
                  </script> ";
 }
+
+
 require($_SERVER['DOCUMENT_ROOT'] . '/fashion/footer.php'); ?>
-=======
-
-
-<?php require($_SERVER['DOCUMENT_ROOT'] . '/fashion/footer.php'); ?>
->>>>>>> 4a6fec8c01a91602a682bdecae6218329f781446

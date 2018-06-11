@@ -22,7 +22,6 @@ echo'<div class="container">
 				<th style="width: 20%;" >Details</th>
 				<th style="width: 20%;">Status</th>
 			</tr>';
-var_dump($sql);
 $query=mysqli_query($connection,$sql);
 	if($query){
     while($row = $query-> fetch_assoc()){
@@ -36,8 +35,8 @@ $query=mysqli_query($connection,$sql);
         			</tr>';
     }}
 
-    elseif(!$query || mysqli_num_rows($query)==0) {
-    	echo'<tr><td> You do not have any current applications</td></tr>';
+    if(!$query || mysqli_num_rows($query)==0) {
+    	echo'<tr><td colspan="3"> You do not have any current applications</td></tr>';
     }
 
     echo'</table>

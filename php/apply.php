@@ -51,7 +51,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/dbcon.php');
  
     move_uploaded_file($file_loc,$folder.$file);
 
-    $cvpath = $folder.$file;
+    
 
     // upload images
 
@@ -69,7 +69,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/dbcon.php');
 
     $target = $_SERVER['DOCUMENT_ROOT'].'/fashion/images/application/images/'.$name;
 
-    $imgpaths[]= $target;
+    $imgpaths[]= $name;
     $img_data = base64_encode(serialize($imgpaths));
      
     move_uploaded_file($temp,$target);
@@ -113,7 +113,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/dbcon.php');
     
         // insert in to application table
 
-    $sql="INSERT INTO application (u_id,job_id,name,dob,address,contactno,email,education,work_experience,prof_q,cv,img,mark,status) VALUES ('$u_id','$job_id','$fname','$bdate',' $address','$contactno','$email','$edu','$work_data', '$prof_data','$cvpath','$img_data',$tot_mark,'Received')";
+    $sql="INSERT INTO application (u_id,job_id,name,dob,address,contactno,email,education,work_experience,prof_q,cv,img,mark,status) VALUES ('$u_id','$job_id','$fname','$bdate',' $address','$contactno','$email','$edu','$work_data', '$prof_data','$file','$img_data',$tot_mark,'Received')";
     $result = $connection->query($sql);
   
     var_dump($sql);

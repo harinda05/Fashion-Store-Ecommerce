@@ -5,6 +5,7 @@
 
 require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/session.php');
 require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/header_logged.php');
+if ($_SESSION["role"] == 'user' ){
 
 
 ?>
@@ -168,4 +169,13 @@ require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/header_logged.php');
 
 
 
-<?php require($_SERVER['DOCUMENT_ROOT'] . '/fashion/footer.php'); ?>
+<?php 
+}
+
+else{
+  echo"<script language='javascript'>
+                  window.alert('You Do Not Have Permission to access this page')
+                  window.location.href='/fashion';
+                 </script> ";
+}
+require($_SERVER['DOCUMENT_ROOT'] . '/fashion/footer.php'); ?>

@@ -92,14 +92,14 @@
 
 			<li>Curriculum Vitae (CV) : 
 
-			<a href="'.$row['cv'].'" download>
+			<a href="/fashion/images/application/cv/'.$row['cv'].'" download>
   				<label> Download CV </label>
 			</a>
 
 			</li>
 			<li>Scanned Images : </li>';
 			foreach($img_array as $a => $resp) {
-				echo'<a href="'.$resp.'" download>
+				echo'<a href="/fashion/images/application/images/'.$resp.'" download>
   				<label> Download Image'.$a.' </label> <br>
 			</a>';
 			}

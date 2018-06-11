@@ -12,16 +12,16 @@ require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/session.php');
 
     $sql = "SELECT * FROM jobs INNER JOIN department ON jobs.dept_id=department.dept_id where jobs.job_id = $job_id";
 
-var_dump($sql);
+
     $result=mysqli_query($connection,$sql);
 
-    var_dump($sql);
+   
     while($row = $result -> fetch_assoc()){
 
       echo  '<div class="container">
         
             <div class="dept_heading">
-                <h2 style="font-size: 40px; color: #00204A; text-align: center; padding: 25px;">'.$row['department'].' Department</h2>
+                <h2 style="font-size: 40px; color: #00204A; text-align: center; padding: 25px;text-transform: uppercase">'.$row['department'].' Department</h2>
             </div>
         
             <div class="view_job">
@@ -44,7 +44,7 @@ var_dump($sql);
                 $query_app_sql=mysqli_query($connection,$app_sql);
                 
                 if(mysqli_num_rows($query_app_sql)>0 ){
-                    echo'<label> You Have Already Applied For this Job </label>';
+                    echo'<button><a>You Have Already Applied</a></button>';
                 }
 
                 elseif(!$query_app_sql || mysqli_num_rows($query_app_sql)==0){

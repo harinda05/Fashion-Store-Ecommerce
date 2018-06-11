@@ -25,23 +25,26 @@ require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/session.php');
             </div>
         
             <div class="view_job">
-                <h2>'.$row['position'].'</h2>
+                <h2>Job Position : '.$row['position'].'</h2>
                 <hr style="border: 1.5px solid #00204A; margin-bottom: 30px; width: 100%;">
-        
-                <h3>Descrption</h3>
-        
-                <p>'.$row['description'].'</p>
-
-                <h3>Date Posted</h3>
-        
-                <p>'.$row['post_date'].'</p>
-
-                <h3>Closing Date</h3>
-        
-                <p>'.$row['closing_date'].'</p>
 
 
-                <img src="/fashion/images/job/'.$row['img_job'].'" height="70%" width="70%">'
+                <table class="job">
+                    <tr>
+                        <th>Descrption</th>
+                        <th style="width:20%;">Date Posted</th>
+                        <th style="width:20%;">Closing Date</th>
+                    </tr>
+                    <tr>
+                        <td>'.$row['description'].'</td>
+                        <td>'.$row['post_date'].'</td>
+                        <td>'.$row['closing_date'].'</td>
+                    </tr>
+                </table>
+        
+
+
+                <img style="padding:20px; padding-left:25%;" src="/fashion/images/job/'.$row['img_job'].'" height="50%" width="50%">'
                 ;
 
 

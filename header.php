@@ -13,7 +13,7 @@
 
 	<!-- Header -->
 	<div class="header" >
-		<a href="/fashion/index.php"><img src="/fashion/img/logo.png" height="50px" width="70px"></a>
+		<a href="/fashion/index.php"><img style="border-radius: 5px; padding-top: 2.5px;" src="/fashion/img/logo.png" height="50px" width="70px"></a>
 		<div class="menu">
 			<ul>
 				<li><a href="#Help">Help</a></li>
@@ -38,7 +38,7 @@
   					</div>
 				</div>
 				</li>
-				<li><a>Name</a></li -->>  <!-- put the username here -->
+				<li><a>Name</a></li -->  <!-- put the username here -->
 			<!-- </ul>
 		</div> -->
 

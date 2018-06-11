@@ -27,7 +27,7 @@ include('header.php');
 
 
     	 	$search_query = $_GET['user_query'];
-            $get_job="SELECT * FROM jobs INNER JOIN department ON jobs.dept_id=department.dept_id where position like '%$search_query%' OR title like '%$search_query%' ;";
+            $get_job="SELECT * FROM jobs INNER JOIN department ON jobs.dept_id=department.dept_id where position like '%$search_query%' OR title like '%$search_query%' OR department like '%$search_query%'  ;";
 
             
     	//$get_job = "SELECT * FROM jobs WHERE position like '%$search_query%' OR title like '%$search_query%' ;";
@@ -38,10 +38,11 @@ include('header.php');
     		
     		$position = $row_job['position'];
     		$closing_date = $row_job['closing_date'];
+            $department = $row_job['department'];
 
     		 echo   
                     '<tr>
-                    	<td>Department</td>
+                    	<td>'.$department.' </td>
                         <td>'.$position.'  </td>
             
                         <td>'.$closing_date.'  </td>

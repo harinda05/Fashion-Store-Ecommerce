@@ -29,7 +29,7 @@ include('header.php');
     	 	$search_query = $_GET['user_query'];
             $get_job="SELECT * FROM jobs INNER JOIN department ON jobs.dept_id=department.dept_id where position like '%$search_query%' OR title like '%$search_query%' ;";
 
-            var_dump($get_job);
+            
     	//$get_job = "SELECT * FROM jobs WHERE position like '%$search_query%' OR title like '%$search_query%' ;";
 
     	$run_job = mysqli_query($connection, $get_job);

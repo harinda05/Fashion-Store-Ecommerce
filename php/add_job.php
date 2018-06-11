@@ -27,7 +27,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/dbcon.php');
  
     move_uploaded_file($file_loc,$folder.$file);
 
-    $job_img_path = $folder.$file;
+    
 
     // upload images
 
@@ -39,7 +39,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/dbcon.php');
     
         // insert in to application table
 
-    $sql="INSERT INTO jobs (u_id,dept_id,title,position,description,post_date,closing_date,img_job) VALUES ('$u_id','$dept_id','$title','$position','$desc', '$post_date', '$cls_date', '$job_img_path')";
+    $sql="INSERT INTO jobs (u_id,dept_id,title,position,description,post_date,closing_date,img_job) VALUES ('$u_id','$dept_id','$title','$position','$desc', '$post_date', '$cls_date', '$file')";
     $result = $connection->query($sql);
     
     var_dump($sql);

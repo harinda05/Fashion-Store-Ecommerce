@@ -41,7 +41,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/session.php');
                 <p>'.$row['closing_date'].'</p>
 
 
-                <img src="'.$row['img_job'].'" height="70%" width="70%">'
+                <img src="/fashion/images/job/'.$row['img_job'].'" height="70%" width="70%">'
                 ;
 
 

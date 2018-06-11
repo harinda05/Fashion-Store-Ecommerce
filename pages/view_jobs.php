@@ -1,6 +1,22 @@
 <?php
+    session_start();
+    if (isset($_SESSION['nID'])){
+
+        if ($_SESSION["role"] == 'user' ){
+        require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/header_logged.php');}
+
+        if ($_SESSION["role"] == 'client' ){
+        require($_SERVER['DOCUMENT_ROOT'] . '/fashion/client_header.php');}
     
-    require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/header_logged.php');
+
+    if ($_SESSION["role"] == 'admin' ){
+        require($_SERVER['DOCUMENT_ROOT'] . '/fashion/admin_header.php');
+    } 
+}
+    else{
+               require($_SERVER['DOCUMENT_ROOT'] . '/fashion/header.php');
+
+    }
 
   
 

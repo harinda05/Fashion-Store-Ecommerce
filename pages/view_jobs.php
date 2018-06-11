@@ -66,7 +66,7 @@
             
                         <td>'. $row["closing_date"] .'  </td>
 
-                        <td>'. '<a href="/fashion/pages/job_description.php?job_id='.$row["job_id"].'">View</a> </td>
+                        <td>'. '<button  class="view_btn"><a style="text-decoration: none; color: black;" href="/fashion/pages/job_description.php?job_id='.$row["job_id"].'">View</a></button> </td>
                     </tr>
                                     
                             ' ;

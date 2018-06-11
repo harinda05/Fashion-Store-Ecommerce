@@ -68,7 +68,7 @@ CREATE TABLE `application` (
   PRIMARY KEY (`u_id`,`job_id`),
   KEY `job_id` (`job_id`),
   KEY `app_id` (`app_id`),
-  CONSTRAINT `application_ibfk_1` FOREIGN KEY (`u_id`) REFERENCES `user` (`u_id`),
+  CONSTRAINT `application_ibfk_1` FOREIGN KEY (`u_id`) REFERENCES `user` (`u_id`) ON DELETE CASCADE,
   CONSTRAINT `application_ibfk_2` FOREIGN KEY (`job_id`) REFERENCES `jobs` (`job_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -79,7 +79,7 @@ CREATE TABLE `application` (
 
 LOCK TABLES `application` WRITE;
 /*!40000 ALTER TABLE `application` DISABLE KEYS */;
-INSERT INTO `application` VALUES (1,4,1,'Saaman Rathnapala','2015-08-01',' adawdad samagi road','755662122','dwd@gmail.com','Post Graduate','a:1:{i:0;a:3:{i:0;s:0:\"\";i:1;s:0:\"\";i:2;s:0:\"\";}}','a:1:{i:0;a:3:{i:0;s:0:\"\";i:1;s:0:\"\";i:2;s:0:\"\";}}','C:/wamp64/www/fashion/images/application/cv/','','Received',28),(13,4,7,'Rodrigo Prince','1998-05-12',' 123 Samgi RD, Polonnaruwa','7748156232','burndownonline@gmail.com','Ordinary Level','YToxOntpOjA7YTozOntpOjA7czo3OiJKciBFeGVjIjtpOjE7czo4OiI2IG1vbnRocyI7aToyO3M6NToiRXNvZnQiO319','YToyOntpOjA7YTozOntpOjA7czo0OiIyMDExIjtpOjE7czozOiJCQ1MiO2k6MjtzOjU6IkVTT0ZUIjt9aToxO2E6Mzp7aTowO3M6NDoiMjAxNSI7aToxO3M6NToiQ0lTQ08iO2k6MjtzOjU6IkVTT0ZUIjt9fQ==','C:/wamp64/www/fashion/images/application/cv/ecotrail.txt','YToyOntpOjA7czo1ODoiQzovd2FtcDY0L3d3dy9mYXNoaW9uL2ltYWdlcy9hcHBsaWNhdGlvbi9pbWFnZXMvc2Nob29sLnBuZyI7aToxO3M6NTQ6IkM6L3dhbXA2NC93d3cvZmFzaGlvbi9pbWFnZXMvYXBwbGljYXRpb24vaW1hZ2VzL3d3LnBuZyI7fQ==','Received',16);
+INSERT INTO `application` VALUES (13,4,7,'Rodrigo Prince','1998-05-12',' 123 Samgi RD, Polonnaruwa','7748156232','burndownonline@gmail.com','Ordinary Level','YToxOntpOjA7YTozOntpOjA7czo3OiJKciBFeGVjIjtpOjE7czo4OiI2IG1vbnRocyI7aToyO3M6NToiRXNvZnQiO319','YToyOntpOjA7YTozOntpOjA7czo0OiIyMDExIjtpOjE7czozOiJCQ1MiO2k6MjtzOjU6IkVTT0ZUIjt9aToxO2E6Mzp7aTowO3M6NDoiMjAxNSI7aToxO3M6NToiQ0lTQ08iO2k6MjtzOjU6IkVTT0ZUIjt9fQ==','C:/wamp64/www/fashion/images/application/cv/ecotrail.txt','YToyOntpOjA7czo1ODoiQzovd2FtcDY0L3d3dy9mYXNoaW9uL2ltYWdlcy9hcHBsaWNhdGlvbi9pbWFnZXMvc2Nob29sLnBuZyI7aToxO3M6NTQ6IkM6L3dhbXA2NC93d3cvZmFzaGlvbi9pbWFnZXMvYXBwbGljYXRpb24vaW1hZ2VzL3d3LnBuZyI7fQ==','Received',16);
 /*!40000 ALTER TABLE `application` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -182,7 +182,7 @@ CREATE TABLE `jobs` (
   KEY `dept_id` (`dept_id`),
   CONSTRAINT `jobs_ibfk_1` FOREIGN KEY (`u_id`) REFERENCES `client_department` (`u_id`),
   CONSTRAINT `jobs_ibfk_2` FOREIGN KEY (`dept_id`) REFERENCES `department` (`dept_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -191,7 +191,7 @@ CREATE TABLE `jobs` (
 
 LOCK TABLES `jobs` WRITE;
 /*!40000 ALTER TABLE `jobs` DISABLE KEYS */;
-INSERT INTO `jobs` VALUES (2,4,'1','New Recruitment','SMM','Social media marketer','2018-06-15','2018-06-20','null'),(4,5,'2','aaa','Jr Exec','aaa','2018-06-05','2018-06-01','C:/xampp/htdocs/fashion/images/job/18557112_1860632280631523_549291065253158337_n.jpg'),(5,5,'2','New Recruitment','Fashin Designer','Immediate Recruitment','2018-06-10','2018-06-16','C:/wamp64/www/fashion/images/job/award.png');
+INSERT INTO `jobs` VALUES (2,4,'1','New Recruitment','SMM','Social media marketer','2018-06-15','2018-06-20','null'),(4,5,'2','aaa','Jr Exec','aaa','2018-06-05','2018-06-01','C:/xampp/htdocs/fashion/images/job/18557112_1860632280631523_549291065253158337_n.jpg'),(5,5,'2','New Recruitment','Fashin Designer','Immediate Recruitment','2018-06-10','2018-06-16','C:/wamp64/www/fashion/images/job/award.png'),(6,4,'1','Technician Needed','Jr Technician','Urgent Recruitemnt','2018-06-11','2018-06-24','www.jpg');
 /*!40000 ALTER TABLE `jobs` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -231,4 +231,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-06-10 15:15:46
+-- Dump completed on 2018-06-11 13:31:04

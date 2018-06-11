@@ -38,7 +38,13 @@ require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/session.php');
 
                 <h3>Closing Date</h3>
         
-                <p>'.$row['closing_date'].'</p>';
+                <p>'.$row['closing_date'].'</p>
+
+
+                <img src="'.$row['img_job'].'" height="70%" width="70%">'
+                ;
+
+
 
                 $app_sql = "SELECT * FROM application where job_id = $job_id AND u_id =$u_id";
                 $query_app_sql=mysqli_query($connection,$app_sql);

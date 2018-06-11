@@ -37,8 +37,13 @@
 	<!-- Slide Image -->
 	<div class="slide">
 		<div class="search_bar">
+<<<<<<< HEAD
 			<form  method="GET" action="results.php" enctype="multipart/form-data" >
 				<input class="search_form" type="search" name="user_query" placeholder="Job title or keywords" required="">
+=======
+			<form  method="get" action="results.php" enctype="multipart/form-data" >
+				<input class="search_form" type="search" name="user_query" placeholder="Job title or keywords" required="" autocomplete="off">
+>>>>>>> c4bc976aeb85c63313741b25c32ceefdbbbb189c
 				<button type="submit" name="search" class="search_button">Find Job</button>
 			</form>
 		</div>

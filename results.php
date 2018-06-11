@@ -46,7 +46,7 @@ include('header.php');
             
                         <td>'.$closing_date.'  </td>
 
-                        <td>'. '<a href="/fashion/pages/job_description.php?job_id='.$row_job["job_id"].'">View</a> </td>
+                        <td>'. '<buttob><a style="text-decoration: none; color: black;" href="/fashion/pages/job_description.php?job_id='.$row_job["job_id"].'">View</a></button> </td>
                     </tr>
                                     
             ';

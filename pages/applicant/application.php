@@ -166,4 +166,6 @@ require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/header_logged.php');
 </script>
 
 
+
+
 <?php require($_SERVER['DOCUMENT_ROOT'] . '/fashion/footer.php'); ?>

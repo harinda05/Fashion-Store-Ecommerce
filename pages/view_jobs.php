@@ -46,8 +46,8 @@
         <table class="job">
             <tr>
                 <th>Position</th>
-                <th style="width: 15%;" >Closing Date</th>
-                <th>View</th>
+                <th style="width: 20%;" >Closing Date</th>
+                <th style="width: 20%;">View</th>
             </tr>
 
 

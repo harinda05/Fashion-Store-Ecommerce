@@ -21,7 +21,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/session.php');
       echo  '<div class="container">
         
             <div class="dept_heading">
-                <h2 style="font-size: 40px; color: #00204A; text-align: center; padding: 25px;text-transform: uppercase">'.$row['department'].' Department</h2>
+                <h2 style="font-size: 40px; color: #FFA500; text-align: center; padding: 25px;text-transform: uppercase">'.$row['department'].' Department</h2>
             </div>
         
             <div class="view_job">
@@ -54,7 +54,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/session.php');
                 }
 
                 elseif(!$query_app_sql || mysqli_num_rows($query_app_sql)==0){
-                echo '<button><a href="/fashion/pages/applicant/application.php?job_id='.$row['job_id'].'">Apply</a></button>';}
+                echo '<button style="margin-left:40%;"><a href="/fashion/pages/applicant/application.php?job_id='.$row['job_id'].'">Apply</a></button>';}
                 
             echo'</div>
             

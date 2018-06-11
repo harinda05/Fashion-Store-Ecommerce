@@ -8,7 +8,7 @@ include('header.php');
 <div class="container">
 
 	<div class="dept_heading">
-        <h2 style="font-size: 40px; color: #00204A; text-align: center; padding: 25px;text-transform: uppercase">Search Results</h2>
+        <h2 style="font-size: 30px; color: #FFA500; text-align: center; padding: 30px;text-transform: uppercase">Search Results</h2>
     </div>
 
     <div class="view_jobs">

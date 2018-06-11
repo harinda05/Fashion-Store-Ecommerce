@@ -37,7 +37,7 @@
     echo ' <div class="container">
 
     <div class="dept_heading">
-        <h2 style="font-size: 40px; color: #00204A; text-align: center; padding: 25px;text-transform: uppercase">'.$dept.' Department</h2>
+        <h2 style="font-size: 40px; color: #FFA500; text-align: center; padding: 25px;text-transform: uppercase">'.$dept.' Department</h2>
     </div>
 
     <div class="view_jobs">

@@ -30,9 +30,8 @@
 			</tr>
 			';
 
-	$sql = "SELECT * FROM application WHERE job_id=$job_id ORDER BY mark";
+	$sql = "SELECT * FROM application WHERE job_id=$job_id ORDER BY mark DESC";
     $result=mysqli_query($connection,$sql);
-    var_dump($sql);
     if($result){
     	while($row = $result -> fetch_assoc()){
     		echo '<tr>

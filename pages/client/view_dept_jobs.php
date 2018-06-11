@@ -40,7 +40,7 @@
    		';
    	}
    }
-var_dump($row["job_id"]);
+
    echo'</table>
 
 		</div>
@@ -50,7 +50,7 @@ var_dump($row["job_id"]);
 
 ?>
 
-<? require($_SERVER['DOCUMENT_ROOT'] . '/fashion/footer.php'); ?>
+<?php require($_SERVER['DOCUMENT_ROOT'] . '/fashion/footer.php'); ?>
 
 
 

@@ -3,7 +3,6 @@
 <?php 
 
 require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/session.php');
-var_dump($_SESSION["role"]);
 if ($_SESSION["role"] == 'admin' ){
 
 echo '

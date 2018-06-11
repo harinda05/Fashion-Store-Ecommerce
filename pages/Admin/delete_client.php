@@ -23,7 +23,7 @@ $sql="SELECT * FROM user INNER JOIN client_department ON user.u_id=client_depart
 $result=mysqli_query($connection,$sql);
     if($result){
     	while($row = $result -> fetch_assoc()){
-    		echo $row['u_id'];
+    		
     	
     		$get_dept = "SELECT department from department where dept_id=".$row["dept_id"]."";
     		$query=mysqli_query($connection,$get_dept);

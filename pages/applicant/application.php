@@ -1,4 +1,3 @@
-<html>
 
 <?php 
 
@@ -12,7 +11,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/header_logged.php');
 
 	<div class="container">
 
-	<form class="add" method="POST" action="../../php/apply.php?u_id=<?php echo $_SESSION['u_id'] ?>&job_id=<?php echo $_GET['job_id'] ?>" enctype="multipart/form-data">
+	<form id="application" class="add" method="POST" action="../../php/apply.php?u_id=<?php echo $_SESSION['u_id'] ?>&job_id=<?php echo $_GET['job_id'] ?>" enctype="multipart/form-data">
 
     <div class="app_heading">
       <h2 style="font-size: 30px; color: #00204A; text-align: center; padding: 30px; font-weight: normal;">Application Form
@@ -23,11 +22,11 @@ require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/header_logged.php');
     <div class="app_form">
 
     <div>
-      <input type="text" placeholder="NIC" name="nic" id ="nic" required/>
+      <input type="text" placeholder="Full Name" name="fname" id ="name" required/>
     </div>
 
-	  <div>
-      <input type="text" placeholder="Full Name" name="fname" id ="name" required/>
+    <div>
+      <input type="text" placeholder="NIC" name="nic" id ="nic" maxlength="10" required/>
     </div>
 
     <div id="date">
@@ -37,7 +36,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/header_logged.php');
     </div>
 
     <div>
-      <input type="text" placeholder="contact no" name="contact" id ="contact" required/>
+      <input type="text" placeholder="Contact Number (format: xxxxxxxxxx)" name="contact" id ="contact" pattern="^\d{10}$"  required/>
     </div>
 
     <div>
@@ -64,7 +63,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/header_logged.php');
     <div id='container_prof'>
       <label>Professional Qualifications</label>
           <div id='prof'>
-               <input type="text" placeholder="Year" name="prof_year[]" required />
+               <input type="text" placeholder="Year" name="prof_year[]" maxlength="4"  required />
                <input type="text" placeholder="Qualification" name="prof_qual[]" required />
                <input type="text" placeholder="Institute" name="prof_inst[]" required />
           </div>
@@ -164,6 +163,8 @@ require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/header_logged.php');
          original_img.parentNode.appendChild(clone_img);
      }
 </script>
+
+
 
 
 

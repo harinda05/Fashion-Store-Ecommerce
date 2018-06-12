@@ -45,8 +45,8 @@
     	}
     }
 
-    if(!$result){
-    	echo'<tr><td>No Applications Found</td></tr>';
+    if(!$result || mysqli_num_rows($result)==0){
+    	echo'<tr><td colspan="3">No Applications Found</td></tr>';
     }
 
     echo '</table>

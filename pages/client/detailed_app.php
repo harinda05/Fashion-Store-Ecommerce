@@ -10,6 +10,10 @@
 
     require($_SERVER['DOCUMENT_ROOT'] . '/fashion/php/dbcon.php');
 
+    /*Update Status */
+    $query = "UPDATE application SET status='In Review' where app_id=$app_id";
+    mysqli_query($connection,$query);
+
     $sql = "SELECT * FROM application WHERE app_id=$app_id";
     $result=mysqli_query($connection,$sql);
  

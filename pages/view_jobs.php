@@ -54,8 +54,7 @@
                                     ';
     $t_date=date("Y-m-d");
     
-    $sql = "SELECT * FROM jobs INNER JOIN department ON jobs.dept_id=department.dept_id where jobs.dept_id = $dept_id AND closing_date>=$t_date ORDER BY jobs.closing_date";
-
+    $sql = "SELECT * FROM jobs INNER JOIN department ON jobs.dept_id=department.dept_id where jobs.dept_id = $dept_id AND closing_date>=CURRENT_TIMESTAMP ORDER BY jobs.closing_date";
     $result=mysqli_query($connection,$sql);
 
     if ($result){

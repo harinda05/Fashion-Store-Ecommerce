@@ -24,7 +24,7 @@ else{
 
 	echo '<div class="main_body">
 		<form method="Post" action="/fashion/php/login_f.php">
-		<div class="form">
+		<div class="form1">
 			<h1>Log In</h1>
 			<hr style="border: 1.5px solid #00204A; margin-bottom: 30px; width: 50%;">
 

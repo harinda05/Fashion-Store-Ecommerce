@@ -32,12 +32,12 @@
     		<br>
 
     		<label for="password"><b>Password</b></label>
-    		<input type="password" placeholder="Enter Password" name="password" id="password" autocomplete="off" required>
+    		<input style="width: 93% !important;" type="password" placeholder="Enter Password" name="password" id="password" autocomplete="off" required>
 
     		<br>
 
     		<label for="password"><b>Confirm Password</b></label>
-    		<input type="password" placeholder="Enter Password" name="cpassword" id="cpassword" autocomplete="off" required>
+    		<input style="width: 93% !important;" type="password" placeholder="Enter Password" name="cpassword" id="cpassword" autocomplete="off" required>
 
     		<p style="text-align: center;">By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a></p>
 			
